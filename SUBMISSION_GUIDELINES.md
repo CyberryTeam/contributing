@@ -15,13 +15,13 @@ Before submitting a new pull request, make sure there are no existing features o
 1. Open a new issue by following the [Issue](#issue) section
 2. [Fork the repository](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
 3. Create a new branch by following the [Branch](GIT_GUIDELINES.md#branch) section of the [Git Guidelines](GIT_GUIDELINES.md)
-```
+```shell script
 git checkout -b <branch-name>
 ```
 4. Make your changes by following the project Code Guidelines
 5. Commit your changes by following the [Commit](GIT_GUIDELINES.md#commit) section of the [Git Guidelines](GIT_GUIDELINES.md)
 6. Push your branch
-```
+```shell script
 git push <branch-name>
 ```
 7. [Create a new pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
