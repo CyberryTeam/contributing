@@ -4,6 +4,7 @@ on: [pull_request]
 
 jobs:
   lint:
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
