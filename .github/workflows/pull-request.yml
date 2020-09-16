@@ -1,15 +1,18 @@
-name: Linter
+name: Pull Request
 
 on: [pull_request]
 
 jobs:
   lint:
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Lint
-        uses: docker://github/super-linter:v2.2.0
+        uses: github/super-linter@v3
         env:
+          FILTER_REGEX_EXCLUDE: .*.github/.*
           VALIDATE_ALL_CODEBASE: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
