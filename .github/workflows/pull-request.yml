@@ -3,8 +3,8 @@ name: Pull Request
 on: [pull_request]
 
 jobs:
-  lint:
-    name: Lint
+  super-linter:
+    name: Super-Linter
     runs-on: ubuntu-latest
 
     steps:
@@ -13,6 +13,7 @@ jobs:
       - name: Lint
         uses: github/super-linter@v3
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FILTER_REGEX_EXCLUDE: .*.github/.*
           VALIDATE_ALL_CODEBASE: false
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_MD: true
